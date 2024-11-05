@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escuela Técnica - Página Principal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Barra superior con redes sociales y accesos rápidos -->
+  <div class="top-bar text-center">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> 
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#" onclick="navigateTo('home.html')">Escuela Técnica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('institucional.html')">Institucional</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="firstCycleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              1º Ciclo
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="firstCycleDropdown">
+              <li><a class="dropdown-item" href="#" onclick="navigateTo('procedimientos-tecnicos.html')">Procedimientos Técnicos</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateTo('procedimientos-tecnologicos.html')">Procedimientos Tecnológicos</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateTo('dibujo-tecnologico.html')">Dibujo Tecnológico</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="secondCycleDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              2º Ciclo
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="secondCycleDropdown">
+              <li><a class="dropdown-item" href="#" onclick="navigateTo('informatica.html')">Informática</a></li>
+              <li><a class="dropdown-item" href="#" onclick="navigateTo('electronica.html')">Electrónica</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('novedades.html')">Novedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('extension.html')">Extensión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('cooperadora.html')">Cooperadora</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Diapositivas Manuales</title>
+  </head>
+  <body>
+  
+  <!-- Contenedor de la presentación de diapositivas -->
+  <div class="slideshow-container">
+  
+    <!-- Diapositiva 1 -->
+    <div class="slide">
+      <img src="img/descarga.jfif" alt="Diapositiva 1">
+      <div class="slide-caption">
+        <h2>Título 1</h2>
+        <p>Descripción de la diapositiva 1</p>
+      </div>
+    </div>
+  
+    <!-- Diapositiva 2 -->
+    <div class="slide">
+      <img src="img/th.jfif" alt="Diapositiva 2">
+      <div class="slide-caption">
+        <h2>Título 2</h2>
+        <p>Descripción de la diapositiva 2</p>
+      </div>
+    </div>
+  
+    <!-- Diapositiva 3 -->
+    <div class="slide">
+      <img src="imagen3.jpg" alt="Diapositiva 3">
+      <div class="slide-caption">
+        <h2>Título 3</h2>
+        <p>Descripción de la diapositiva 3</p>
+      </div>
+    </div>
+  
+    <!-- Botones de navegación -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094; Anterior</button>
+    <button class="next" onclick="changeSlide(1)">Siguiente &#10095;</button>
+  </div>
+  
+  <!-- Puntos de navegación -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
+  
+  <!-- JavaScript para navegación -->
+  <script>
+    function navigateTo(page) {
+      // Redirige a la URL especificada.
+      window.location.href = page;
+    }
+
+    let slideIndex = 1;
+showSlide(slideIndex);
+
+// Función para cambiar la diapositiva
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+// Función para mostrar la diapositiva actual
+function currentSlide(n) {
+  showSlide(slideIndex = n);
+}
+
+// Función para mostrar la diapositiva correspondiente
+function showSlide(n) {
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  // Oculta todas las diapositivas
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Quita la clase "active" de todos los puntos
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Muestra la diapositiva actual y añade la clase "active" al punto correspondiente
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+  </script>
+
+  <!-- Bootstrap JS y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
